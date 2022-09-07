@@ -1,3 +1,6 @@
+{-# LANGUAGE TypeSynonymInstances #-}
+{-# LANGUAGE FlexibleInstances #-}
+
 module Chapter6.JSONClass (
     JAry(..),
     jary
@@ -40,7 +43,7 @@ instance JSON Double where
     fromJValue = doubleToJValue id
 
 newtype JAry a = JAry {
-  fromJary :: [a]
+  fromJAry :: [a]
 } deriving (Eq, Ord, Show)
 
 newtype JObj a = JObj {
