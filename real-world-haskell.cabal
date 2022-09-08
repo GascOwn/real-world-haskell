@@ -37,6 +37,7 @@ library
       Chapter5.TypeInference
       Chapter6.JSONClass
       Chapter6.Typeclasses
+      Chapter7.Actions
       Chapter7.TempFiles
   other-modules:
       Paths_real_world_haskell

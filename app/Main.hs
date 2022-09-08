@@ -6,9 +6,10 @@ import qualified Chapter3.Types as C3
 --import Chapter3.Misc
 import Chapter3.Exercises
 import Chapter4.Exercises
+import Chapter7.Actions 
 
 main :: IO ()
-main = print "ble"
+main = doitall
   
   
   
@@ -34,8 +35,6 @@ main = print "ble"
        --print $ splitWith odd [2,3,4,5,6,7,8,9,10]
        -- print $ asIntEither "3.5"
        -- print $ asIntEither "92233720368547758099"
-
-                    
 
 palindrome :: [Integer]
 palindrome = makePalindrome [1,2,3]
