@@ -56,6 +56,5 @@ interactToUpper :: IO ()
 interactToUpper = interact (map toUpper)
 
 -- interact is also used for filtering
-
 onlyWithA :: IO ()
 onlyWithA = interact (unlines . filter (elem 'a') . lines)

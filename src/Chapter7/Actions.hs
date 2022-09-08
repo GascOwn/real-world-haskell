@@ -1,5 +1,5 @@
 module Chapter7.Actions where
-import Distribution.Types.ForeignLib (libVersionNumberShow)
+    
 import Data.Char (toUpper)
 
 -- The IO Monad defines action, they do nothing when they are defined, but perform the task when invoked.
