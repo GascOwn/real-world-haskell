@@ -55,8 +55,7 @@ basicIO = do
 basicIONoDo :: IO ()
 basicIONoDo = putStrLn "Greetings! What is your name?" >> getLine >>= (\inpStr -> putStrLn $ "Welcome to Haskell, " ++ inpStr ++ "!")
 
--- return in Haskell is different from impeartive languages, it wraps data in a monad.  
-
+-- return in Haskell is different from impeartive languages, it wraps pure data in a monad.  
 isGreen :: IO Bool
 isGreen = do 
     putStrLn "Is green your favorite color?"
