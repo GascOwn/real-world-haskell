@@ -40,6 +40,7 @@ library
       Chapter7.Actions
       Chapter7.TempFiles
       Chapter8.EfficientFileProcessing
+      Chapter8.Regex
   other-modules:
       Paths_real_world_haskell
   hs-source-dirs:
@@ -49,6 +50,7 @@ library
       base >=4.7 && <5
     , bytestring
     , directory
+    , regex-posix
   default-language: Haskell2010
 
 executable real-world-haskell-exe
@@ -63,6 +65,7 @@ executable real-world-haskell-exe
     , bytestring
     , directory
     , real-world-haskell
+    , regex-posix
   default-language: Haskell2010
 
 test-suite real-world-haskell-test
@@ -78,4 +81,5 @@ test-suite real-world-haskell-test
     , bytestring
     , directory
     , real-world-haskell
+    , regex-posix
   default-language: Haskell2010
