@@ -18,6 +18,27 @@ packages:
       sha256: 119f151ee88539f3287276f087f2576b46a1792247e4dac288a930359710f70e
   original:
     hackage: bytestring-0.10.12.1
+- completed:
+    hackage: regex-compat-0.95.2.1@sha256:96c83b06280ebfb6fef01864b2af9eb9e136a9832c563773f327d4197bbbb851,1705
+    pantry-tree:
+      size: 262
+      sha256: 3e65e1219ca48e8988b93151ef6d3d705f57ae65f1ba91e8e8b626c2eaa6b43f
+  original:
+    hackage: regex-compat-0.95.2.1
+- completed:
+    hackage: regex-posix-0.96.0.1@sha256:9dbba4b65a3bb6975d9740814be5593c6b2d2d6a0b3febc8ec940edb9a9bbdf4,2954
+    pantry-tree:
+      size: 748
+      sha256: 63f9502667a393dc22ca34f42bb5b0241d9eb92938627f782a8ff89e52ece48e
+  original:
+    hackage: regex-posix-0.96.0.1
+- completed:
+    hackage: filepath-1.4.2.1@sha256:aff13ab4dd895931e77c22756e6e4e7bc8189351e0fa48270a998b826a63f54a,2291
+    pantry-tree:
+      size: 681
+      sha256: ed5ffa1e42c2626fc3b13b9f7ff3fef6b841515a57021819f8066db4e93264dc
+  original:
+    hackage: filepath-1.4.2.1
 snapshots:
 - completed:
     size: 619170
