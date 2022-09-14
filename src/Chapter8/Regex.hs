@@ -1,5 +1,6 @@
 module Chapter8.Regex where
 
+
 import System.FilePath (dropTrailingPathSeparator, splitFileName, (</>))
 import System.Directory (doesDirectoryExist, doesFileExist,
  getCurrentDirectory, getDirectoryContents, pathIsSymbolicLink)
@@ -7,8 +8,9 @@ import Text.Regex.Posix ( (=~) )
 import Control.Exception( handle)
 import Control.Monad (forM)
 
-globToRegex :: String -> [Char]
-globToRegex cs = '^' : globToRegex' cs ++ "$"
+globToRegex :: String -> String
+globToRegex cs = '^' globToRegex' cs ++ "S"
+
 
 globToRegex' :: String -> String
 globToRegex' "" = ""
