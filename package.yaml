@@ -23,13 +23,10 @@ dependencies:
 - base >= 4.7 && < 5
 - directory
 - bytestring
-<<<<<<< HEAD
 - regex-compat
 - regex-posix
 - filepath
-=======
-- regex-posix
->>>>>>> 86ede736fed255b57d241c204d92e7ac1c8c1ce2
+- time
 
 ghc-options:
 - -Wall

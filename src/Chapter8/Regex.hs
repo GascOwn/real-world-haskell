@@ -8,11 +8,10 @@ import Text.Regex.Posix ( (=~) )
 import Control.Exception( handle)
 import Control.Monad (forM)
 
-globToRegex :: String -> String
-globToRegex cs = '^' globToRegex' cs ++ "S"
+{-globToRegex :: String -> [Char]
+globToRegex cs = '^' : globToRegex' cs ++ "$"
 
-
-globToRegex' :: String -> String
+globToRegex' :: String -> [Char]
 globToRegex' "" = ""
 globToRegex' ('*':cs) = ".*" ++ globToRegex' cs
 globToRegex' ('?':cs) = '.' : globToRegex' cs
@@ -62,14 +61,13 @@ doesNameExist name = do
     fileExists <- doesFileExist name
     if fileExists then return True else doesDirectoryExist name
 
-listMatches :: FilePath -> String -> IO [String]
+
+listMatches :: [Char] -> String -> IO [FilePath]
 listMatches dirName pat = do
-    dirName' <- if null dirName
-                then getCurrentDirectory
-                else return dirName
-    handle (const (return[])) $ do
+    dirName' <- if null dirName then getCurrentDirectory else return dirName
+    handle (const (return [])) $ do
         names <- getDirectoryContents dirName'
-        let names' = if isHidden pat then filter isHidden names else filter (not . isHidden) namesMatching
+        let names' = if isHidden pat then filter isHidden names else filter (not . isHidden) names
         return (filter (`matchesGlob` pat) names')
 
 isHidden :: [Char] -> Bool
@@ -81,4 +79,4 @@ listPlain dirName baseName = do
  exists <- if null baseName
  then doesDirectoryExist dirName
  else doesNameExist (dirName </> baseName)
- return ([baseName | exists])
+ return ([baseName | exists]) -}

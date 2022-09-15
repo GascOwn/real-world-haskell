@@ -41,6 +41,10 @@ library
       Chapter7.TempFiles
       Chapter8.EfficientFileProcessing
       Chapter8.Regex
+      Chapter9.BetterPredicate
+      Chapter9.ControlledVisit
+      Chapter9.ExampleDomainSpecificPredicates
+      Chapter9.RecursiveContents
   other-modules:
       Paths_real_world_haskell
   hs-source-dirs:
@@ -50,12 +54,10 @@ library
       base >=4.7 && <5
     , bytestring
     , directory
-<<<<<<< HEAD
     , filepath
     , regex-compat
-=======
->>>>>>> 86ede736fed255b57d241c204d92e7ac1c8c1ce2
     , regex-posix
+    , time
   default-language: Haskell2010
 
 executable real-world-haskell-exe
@@ -71,11 +73,9 @@ executable real-world-haskell-exe
     , directory
     , filepath
     , real-world-haskell
-<<<<<<< HEAD
     , regex-compat
-=======
->>>>>>> 86ede736fed255b57d241c204d92e7ac1c8c1ce2
     , regex-posix
+    , time
   default-language: Haskell2010
 
 test-suite real-world-haskell-test
@@ -92,9 +92,7 @@ test-suite real-world-haskell-test
     , directory
     , filepath
     , real-world-haskell
-<<<<<<< HEAD
     , regex-compat
-=======
->>>>>>> 86ede736fed255b57d241c204d92e7ac1c8c1ce2
     , regex-posix
+    , time
   default-language: Haskell2010

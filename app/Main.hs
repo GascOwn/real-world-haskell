@@ -7,9 +7,12 @@ import qualified Chapter3.Types as C3
 import Chapter3.Exercises
 import Chapter4.Exercises
 import Chapter7.Actions 
+import System.Directory
 
 main :: IO ()
-main = doitall
+main = do
+       permission <- getPermissions "prices.csv"
+       print permission
   
   
   

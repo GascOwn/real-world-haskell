@@ -1,11 +1,8 @@
 module Chapter8.EfficientFileProcessing where
 
 import qualified Data.ByteString.Lazy as L
-<<<<<<< HEAD
 import Text.Regex.Posix ( (=~) )
-=======
 import qualified Data.ByteString.Lazy.Char8 as CL
->>>>>>> 86ede736fed255b57d241c204d92e7ac1c8c1ce2
 
 -- Being String the default type for reading files, its lack of efficiency will make the program perform badly
 processBadly :: IO ()
@@ -20,11 +17,9 @@ processBadly = do
 hasElfMagic :: L.ByteString -> Bool
 hasElfMagic content = L.take 4 content == elfMagic
     where elfMagic = L.pack [0x7f, 0x45, 0x4c, 0x46]
-
-<<<<<<< HEAD
 regexFoo :: Bool
 regexFoo = "what the fuck" =~ "Foo" :: Bool
-=======
+
 -- The Haskell datatype for representing bytes is Word8 in the Data.Word module
 -- L.readFile is the lazy ByteString version of readFile
 isElfFile :: FilePath -> IO Bool
@@ -56,9 +51,3 @@ highestCloseFrom :: FilePath -> IO ()
 highestCloseFrom path = do
     contents <- CL.readFile path
     print (highestClose contents)
-
-
-
-
-
->>>>>>> 86ede736fed255b57d241c204d92e7ac1c8c1ce2
